@@ -24,9 +24,12 @@ namespace JedDatTypy06
             int b = int.Parse(textBox2.Text);
             int c = int.Parse(textBox3.Text);
             v = a * b * c;
-            double x = (double)a / 10000;
-            double y = (double)b / 1000;
-            double z = (double)c / 100;
+            double x = (double)v / 10000;
+            int v1 = v % 10000;
+            double y = (double)v1 / 1000;
+            int v2 = v1 % 1000;
+            double z = (double)v2 / 100;
+            //nefunguje
 
             label1.Text = "Kvádr má objem " + v + "cm^3" + " = " + x + "m^3 " + y + "dm^3 " + z + "cm^3";
 
